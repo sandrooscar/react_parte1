@@ -1,3 +1,6 @@
+
+https://pt-br.reactjs.org/docs/components-and-props.html
+
 *** AULA01
 Criando um projeto do zero.
 1) Crie um diretório para seu projeto.
@@ -12,7 +15,7 @@ npx create-react-app react-alura
 
 npm start
 
-*** AULA02
+*** AULA02 - Usando componentes
 Arrow function (pega o this da sua criação e mantém até o final, o escope é lexico, não muda)
 O this de uma arrow function é léxico, enquanto o this de uma função padrão é dinâmico.
 ex:
@@ -41,3 +44,16 @@ Nesta aula, aprendemos:
 Criar um Class componente no React
 Criar sub-componentes internos como Function Component
 Comunicação entre componentes utilizando props.
+
+*** AULA03 - Entendendo o state 
+* Diferença state x props
+State: Serve para guardar valores/estado que podem vir a mudar com a interação do usuário com o componente, tendo efeito na renderização do mesmo, o state pode ser passado como props!
+Props: Valores para a configuração de um componente, essas props são passadas pelo elemento acima (que utiliza o componente que irá receber) e são imutáveis, utilizado para a comunicação de componentes.
+Alternativa correta! Esse é justamente o uso desses dois objetos, Props para configuração de componentes e State armazenando estado/valores!
+
+Sempre que alteramos/atualizamos o State, o componente é redesenhado na tela (render)
+
+
+Alternativa correta! A alteração/atualização do estado de um componente (state) desencadeia o redesenho do mesmo!
+Devemos alterar/atualizar o state utilizando o método setState() do React.
+Alternativa correta! Esse é o método proprietário do React para que modifiquemos o State.

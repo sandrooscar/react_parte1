@@ -16,11 +16,12 @@ const TableHead = () => {
 const TableBody = props => {
     const linhas = props.autores.map((linha, index) => {
         return (
-            <tr>
+            //atributo key ideintifica o elemento do array na linha
+            <tr key = {index}>
                 <td>{ linha.nome }</td>
                 <td>{ linha.livro }</td>
                 <td>{ linha.preco }</td>
-                <td><button>Remover</button></td>
+                <td><button onClick = { () => { props.removeAutor(index) } }>Remover</button></td>
             </tr>
         );
     });
@@ -35,11 +36,12 @@ const TableBody = props => {
 class Tabela extends Component {
     render(){
         //pega o aray de autores da propriedae props do componente, autores deve ser o mesmo nome do parametro passado
-        const { autores } = this.props;
+        //associa cada propriedade conforme seu nome passado como parâmetro
+        const { autores, removeAutor} = this.props;
         return (
         <table>
             <TableHead/>
-            <TableBody autores = { autores }/>
+            <TableBody autores = { autores } removeAutor = { removeAutor }/>
           </table>
         );
     }
