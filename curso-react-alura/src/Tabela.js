@@ -7,42 +7,39 @@ const TableHead = () => {
           <th>Autores</th>
           <th>Livros</th>
           <th>Preços</th>
+          <th></th>
         </tr>
       </thead>
     );
 }
 
-const TableBody = () => {
+const TableBody = props => {
+    const linhas = props.autores.map((linha, index) => {
+        return (
+            <tr>
+                <td>{ linha.nome }</td>
+                <td>{ linha.livro }</td>
+                <td>{ linha.preco }</td>
+                <td><button>Remover</button></td>
+            </tr>
+        );
+    });
+
     return(
-      <tbody>
-        <tr>
-          <td>Nico</td>
-          <td>React</td>
-          <td>100</td>
-          <td><button>Remover</button></td>
-        </tr>
-        <tr>
-          <td>Paulo</td>
-          <td>React</td>
-          <td>150</td>
-          <td><button>Remover</button></td>
-        </tr>
-        <tr>
-          <td>Daniel</td>
-          <td>React</td>
-          <td>200</td>
-          <td><button>Remover</button></td>
-        </tr>
-      </tbody>        
+        <tbody>
+            {linhas}
+        </tbody>
     );
 }
 
 class Tabela extends Component {
     render(){
+        //pega o aray de autores da propriedae props do componente, autores deve ser o mesmo nome do parametro passado
+        const { autores } = this.props;
         return (
         <table>
             <TableHead/>
-            <TableBody/>
+            <TableBody autores = { autores }/>
           </table>
         );
     }

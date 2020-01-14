@@ -12,3 +12,32 @@ npx create-react-app react-alura
 
 npm start
 
+*** AULA02
+Arrow function (pega o this da sua criação e mantém até o final, o escope é lexico, não muda)
+O this de uma arrow function é léxico, enquanto o this de uma função padrão é dinâmico.
+ex:
+model => this._controller.update();
+(model, param2) => {
+    console.log(model);
+    console.log(param2);
+}
+
+exemplo 2 com explicação:
+<script>
+    let carro = {
+        velocidade: 100,
+        acelera :function() {
+            console.log(this);
+            console.log(`Carro a ${this.velocidade} km por hora!`);
+        }
+    };
+    carro.acelera();
+</script>
+
+Como escrevemos nosso código dentro da tag script, não estamos dentro de um método ou de outra função, estamos no escopo de window, ou seja, o escopo global. Lembre-se que o this de uma arrow function é léxico, isto é, estático e pega emprestado seu valor do ambiente no qual foi declarado. Como o this naquele ponto em que a arrow function foi declarada é window, seu valor será window.
+
+Nesta aula, aprendemos:
+
+Criar um Class componente no React
+Criar sub-componentes internos como Function Component
+Comunicação entre componentes utilizando props.
