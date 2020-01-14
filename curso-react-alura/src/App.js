@@ -1,12 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Tabela from './Tabela';
 function App() {
   return (
     <div className="App">
-      <h1>Oi</h1>
-      <div className="App-Circulo-Mais-Opcoes"/>
+      <Tabela/>
     </div>
   );
 }
