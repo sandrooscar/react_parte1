@@ -57,3 +57,10 @@ Sempre que alteramos/atualizamos o State, o componente é redesenhado na tela (r
 Alternativa correta! A alteração/atualização do estado de um componente (state) desencadeia o redesenho do mesmo!
 Devemos alterar/atualizar o state utilizando o método setState() do React.
 Alternativa correta! Esse é o método proprietário do React para que modifiquemos o State.
+
+Nesta aula, aprendemos:
+
+Trabalhar com state
+Método setState()
+Comportamento ao se alterar o state
+Método de remoção com filter
