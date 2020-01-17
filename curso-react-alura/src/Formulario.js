@@ -11,9 +11,17 @@ class Formulario extends Component {
         this.state = this.stateInicial;
     }
 
+    //incluindo evento para atribuir valor da digitacao do formulario no state, para futura atribuicao nos campos
+    escutadorDeInput = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name] : value
+        });
+    }
+
     render(){
         
-        const{ nome, livro, preco } = this.state;
+        const { nome, livro, preco } = this.state;
         
         return(
             <form>
@@ -22,21 +30,25 @@ class Formulario extends Component {
                     id="nome"
                     type="text"
                     name="nome" 
-                    value={nome}/>
+                    value={nome}
+                    onChange={this.escutadorDeInput}/>
 
                 <label htmlFor="livro">Livro</label>
                 <input
                     id="livro"
                     type="text"
                     name="livro" 
-                    value={livro}/>
+                    value={livro}
+                    onChange={this.escutadorDeInput}
+                    />
 
                 <label htmlFor="preco">Preço</label>
                 <input
                     id="preco"
                     type="text"
                     name="preco"
-                    value={preco}/>
+                    value={preco}
+                    onChange={this.escutadorDeInput}/>
                 <button type="button">Salvar</button>
             </form>
         )
