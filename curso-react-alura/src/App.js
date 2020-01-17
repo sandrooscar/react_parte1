@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import './App.css';
 import './App.css';
 import Tabela from './Tabela';
+import ContaClicks from './ContaClicks';
+import Form from './Formulario';
 
 class App extends Component {
   state = {
@@ -50,9 +53,11 @@ class App extends Component {
 //alterado para render e incluido o acesso a state na chave autores
   render() {
     return (
-      <div className = "App" >
-        <Tabela autores={ this.state.autores } removeAutor = { this.removeAutor }/>
-      </div>
+        <Fragment>
+          <ContaClicks></ContaClicks>
+          <Tabela autores={ this.state.autores } removeAutor = { this.removeAutor }/>
+          <Form />
+        </Fragment>
     );
   }
 }

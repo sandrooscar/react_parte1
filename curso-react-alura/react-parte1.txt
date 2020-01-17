@@ -58,6 +58,15 @@ Alternativa correta! A alteração/atualização do estado de um componente (sta
 Devemos alterar/atualizar o state utilizando o método setState() do React.
 Alternativa correta! Esse é o método proprietário do React para que modifiquemos o State.
 
+* React hooks
+A recente atualização do React 16.8 trouxe a possibilidade de utilizarmos state em function components.
+
+A forma de fazer isso é utilizando o useState, lembrando que temos que importá-lo conforme abaixo:
+
+import React, {useState} from 'react';
+O useState nos retorna o state atual e uma função que deve ser utilizada para atualizar esse estado, e recebe o estado inicial do componente.
+ver ContaClicks.js 
+
 Nesta aula, aprendemos:
 
 Trabalhar com state
