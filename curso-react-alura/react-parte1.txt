@@ -84,3 +84,9 @@ Trabalhar com formulários
 Utilizando o evento onChange
 Submissão de formulário
 Criar um elemento dinamicamente
+
+*** AULA05
+Instalando materialize
+npm install materialize-css (instala a última versão)
+
+Ao começarmos a trabalhar nos estilos da nossa aplicação, nos deparamos com um problema, a palavra class para aplicarmos uma classe no HTML é uma palavra reservada no Javascript, o sinônimo no React para resolver tal situação é className.
