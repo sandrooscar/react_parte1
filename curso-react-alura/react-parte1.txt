@@ -73,3 +73,14 @@ Trabalhar com state
 Método setState()
 Comportamento ao se alterar o state
 Método de remoção com filter
+
+*** AULA04 - Lidando com formulários
+
+Alterando o state o elemento se redesenha já com o novo elemento na tela!
+
+Nesta aula, aprendemos:
+
+Trabalhar com formulários
+Utilizando o evento onChange
+Submissão de formulário
+Criar um elemento dinamicamente

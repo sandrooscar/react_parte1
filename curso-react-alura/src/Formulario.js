@@ -19,6 +19,14 @@ class Formulario extends Component {
         });
     }
 
+    //captura do props o evento que deverá ser executador ao clicar no submit
+    //manda os dados do state do formulario que contém os dados do novo autor para o app.js
+    submitFormulario = () => {
+        this.props.escutadorDeSubmit(this.state);
+        //zerando os campos do formulario
+        this.setState(this.stateInicial);
+    }
+
     render(){
         
         const { nome, livro, preco } = this.state;
@@ -49,7 +57,7 @@ class Formulario extends Component {
                     name="preco"
                     value={preco}
                     onChange={this.escutadorDeInput}/>
-                <button type="button">Salvar</button>
+                <button type="button" onClick={this.submitFormulario}>Salvar</button>
             </form>
         )
     }

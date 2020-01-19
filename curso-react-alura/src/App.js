@@ -50,13 +50,17 @@ class App extends Component {
     );
   }
 
+  escutadorDeSubmit = autor => {
+    this.setState({autores:[...this.state.autores, autor]})
+  }
+
 //alterado para render e incluido o acesso a state na chave autores
   render() {
     return (
         <Fragment>
           <ContaClicks></ContaClicks>
           <Tabela autores={ this.state.autores } removeAutor = { this.removeAutor }/>
-          <Form />
+          <Form escutadorDeSubmit={this.escutadorDeSubmit}/>
         </Fragment>
     );
   }
