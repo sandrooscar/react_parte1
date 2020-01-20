@@ -39,7 +39,7 @@ class Tabela extends Component {
         //associa cada propriedade conforme seu nome passado como parâmetro
         const { autores, removeAutor} = this.props;
         return (
-        <table className="centered hightlight">
+        <table className="centered highlight">
             <TableHead/>
             <TableBody autores = { autores } removeAutor = { removeAutor }/>
           </table>
