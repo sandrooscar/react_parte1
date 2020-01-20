@@ -90,3 +90,34 @@ Instalando materialize
 npm install materialize-css (instala a última versão)
 
 Ao começarmos a trabalhar nos estilos da nossa aplicação, nos deparamos com um problema, a palavra class para aplicarmos uma classe no HTML é uma palavra reservada no Javascript, o sinônimo no React para resolver tal situação é className.
+
+O que é o Styled Component
+É um framework de estilização via JavaScript (CSS In JS) que utiliza template string (template literals) e CSS provendo uma plataforma onde é possível estilizar seus componentes usando CSS. Ou seja, é possível estilizar seus componentes usando CSS dentro de seu código!
+
+Instalando o módulo Styled Components
+Para fazer a instalação, abra o terminal no diretório do seu projeto e execute o comando:
+
+npm install styled-components
+Note: É recomendado que você instale um plugin para styled-components no seu editor de texto.
+
+* Criando seu primeiro componente estilizado
+1 - Antes de tudo, é necessário importar o módulo no seu arquivo.
+
+import styled from 'styled-components';
+2 - Feito isso, crie um componente Button
+
+const Button = styled.button``;
+É dentro desses (`) acentos graves que entrará o código CSS
+
+3 - Estilize seu button da forma que desejar.
+
+OBS: Podemos criar qualquer componente utilizando styled.TAG
+
+4 - Continue a estilização do componente.
+
+Nesta aula, aprendemos:
+
+Instalação do módulo do materialize-css.
+Importação de um arquivo de estilo.
+Utilizar o materialize.
+Estilizar o projeto utilizando className para atribuição de classes.
